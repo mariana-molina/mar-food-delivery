@@ -32,6 +32,30 @@ const FeatureRow = ({ title, description, id }) => {
 					long={123123}
 					lat={1231231231}
 				/>
+				<RestaurantCard
+					id="123"
+					imgUrl="https://links.papareact.com/gn7"
+					title="YO sushi"
+					rating={4.5}
+					genre="Japanese"
+					address="Av. siempre viva"
+					short_description="this is a restaurant description"
+					dishes=""
+					long={123123}
+					lat={1231231231}
+				/>
+				<RestaurantCard
+					id="123"
+					imgUrl="https://links.papareact.com/gn7"
+					title="YO sushi"
+					rating={4.5}
+					genre="Japanese"
+					address="Av. siempre viva"
+					short_description="this is a restaurant description"
+					dishes=""
+					long={123123}
+					lat={1231231231}
+				/>
 			</ScrollView>
 		</View>
 	);
