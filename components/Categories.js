@@ -1,8 +1,21 @@
 import { View, Text, ScrollView } from 'react-native';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import CategoriesCard from './CategoriesCard';
+import client from '../sanity';
 
 export default function Categories() {
+	const [categories, setCategories] = useState([]);
+
+	useEffect(() => {
+		client
+			.fetch(
+				`
+		*[_type == "category"]
+		`
+			)
+			.then(data => setCategories(data));
+	}, []);
+
 	return (
 		<ScrollView
 			horizontal
@@ -12,18 +25,15 @@ export default function Categories() {
 				paddingHorizontal: 15,
 			}}
 		>
-			<CategoriesCard
-				imgUrl="https://links.papareact.com/gn7"
-				title="testing 1"
-			/>
-			<CategoriesCard
-				imgUrl="https://links.papareact.com/gn7"
-				title="testing 2"
-			/>
-			<CategoriesCard
-				imgUrl="https://links.papareact.com/gn7"
-				title="testing 3"
-			/>
+			{categories.map(category => {
+				return (
+					<CategoriesCard
+						key={category._id}
+						imgUrl={category.image}
+						title={category.name}
+					/>
+				);
+			})}
 		</ScrollView>
 	);
 }

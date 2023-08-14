@@ -22,8 +22,7 @@ const FeatureRow = ({ title, description, id }) => {
 				{ id }
 			)
 			.then(data => setRestaurants(data));
-	}, []);
-	console.log('😊😊', restaurants);
+	}, [id]);
 
 	return (
 		<View>
