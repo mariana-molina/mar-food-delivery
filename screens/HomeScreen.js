@@ -44,7 +44,7 @@ export default function HomeScreen() {
 	}, []);
 
 	return (
-		<SafeAreaView style={SafeViewAndroid.AndroidSafeArea}>
+		<SafeAreaView className="mb-8" style={SafeViewAndroid.AndroidSafeArea}>
 			{/* Header */}
 			<View>
 				<View className="flex-row items-center mx-4 space-x-2 pb-3">

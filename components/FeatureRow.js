@@ -26,8 +26,8 @@ const FeatureRow = ({ title, description, id }) => {
 
 	return (
 		<View>
-			<View className="flex-row mt-4 items-center justify-between px-4">
-				<Text className="text-lg font-bold">{title}</Text>
+			<View className="flex-row mt-4 items-center justify-between px-4 ">
+				<Text className="text-lg font-bold ">{title}</Text>
 				<ArrowRightIcon size={30} color="#00CCBB" />
 			</View>
 			<Text className="text-xs px-4 text-gray-500">{description}</Text>

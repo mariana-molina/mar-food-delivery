@@ -46,15 +46,15 @@ const RestaurantCard = ({
 			<View className="px-3 pb-2">
 				<Text className="font-bold text-lg pt-2">{title}</Text>
 			</View>
-			<View className="flex-row items-center space-x-1">
+			<View className="flex-row items-center space-x-1 px-2">
 				<StarIcon color="green" opacity={0.5} size={22} />
 				<Text className="text-xs text-gray-500">
 					<Text className="text-green-700">{rating}</Text> - {genre}
 				</Text>
 			</View>
-			<View className="flex-row items-center space-x-1">
+			<View className="flex-row items-center space-x-1 px-2">
 				<MapPinIcon color="gray" opacity={0.5} size={22} />
-				<Text className="text-xs text-gray-500">Nearby - {address}</Text>
+				<Text className="text-xs text-gray-500"> {address}</Text>
 			</View>
 		</TouchableOpacity>
 	);
